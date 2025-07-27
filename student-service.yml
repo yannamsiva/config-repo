@@ -1,14 +1,24 @@
 spring:
   application:
     name: student-service
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/studentms
     username: root
     password: root
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
 server:
   port: 2222
